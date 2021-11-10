@@ -1,0 +1,46 @@
+<div class="banner d-flex justify-content-between align-items-center">
+  <h3>Simple Airbnb</h3>
+  <%= link_to 'Add a flat', new_flat_path(@flat), id: 'add-a-flat-btn' %>
+</div>
+
+<div class="container">
+  <h1>All our flats (<%= @flats.count %>)</h1>
+
+
+  <%# <div class="row">
+    <% @flats.each do |flat| %>
+      <%# <div class="col-3 m-2 d-flex flex-column">
+        <%= flat.name %>
+        <%# <%= flat.address %>
+        <%# <%= flat.number_of_guests %>
+        <%# <i class="fas fa-users"> <%= flat.number_of_guests %>
+        <%# <i class="fas fa-euro-sign"> <%= flat.price_per_night %>
+        <%# <div class="more-info mt-auto"> %>
+          <%# <%= link_to 'More info', flat_path(flat) %>
+        <%# </div> %>
+      <%# </div> %>
+    <%# <% end %>
+  <%# </div> %>
+
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-3">
+        <div class="info">
+          <div class="name">
+            <%= flat.name %>
+          </div>
+          <div class="address">
+            <%= flat.address %>
+          </div>
+          <div class="guests-and-price">
+            <i class="fas fa-users"> <%= flat.number_of_guests %></i>
+            <i class="fas fa-euro-sign"> <%= flat.price_per_night %></i>
+          </div>
+          <div class="more-info mt-auto">
+            <%= link_to 'More info', flat_path(flat) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
